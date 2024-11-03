@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import Nav from "./Nav";
 import HogList from "./HogList"; 
 import hogs from "../porkers_data";
-import HogDetails from "./HogDetails";
+
 
 function App() {
 	const [selectedHog, setSelectedHog] = useState(null);
@@ -19,13 +19,13 @@ function App() {
 			return a.weight - b.weight; // Sort by weight
 		}
 	});
-	
 	return (
 		<div className="App">
 			<Nav setFilterGreased={setFilterGreased} setSortCriteria={setSortCriteria} />
-			<HogList hogs={sortedHogs} setSelectedHog={setSelectedHog}/>
-			{selectedHog && <HogDetails hog={selectedHog} setSelectedHog={setSelectedHog} />}
+			<HogList hogs={sortedHogs} setSelectedHog={setSelectedHog} selectedHog={selectedHog}/>
+			
 		</div>
+		
 		
 	);
 }

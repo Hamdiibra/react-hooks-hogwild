@@ -1,11 +1,17 @@
 import React from 'react';
+import { Card } from 'semantic-ui-react';
 
-function HogTile({ hog ,setSelectedHog}) {
+function HogTile({ hog, setSelectedHog }) {
     return (
-        <div className="hog-tile" onClick={() => setSelectedHog(hog)}>
-            <h3>{hog.name}</h3>
-            <img src={hog.image} alt={hog.name} />
-        </div>
+        <Card className="hog-tile" onClick={() => setSelectedHog(hog)}>
+            <div className="image">
+                <img src={hog.image} alt={hog.name} />
+            </div>
+            <Card.Content>
+                <Card.Header>{hog.name}</Card.Header>
+            </Card.Content>
+        </Card>
     );
 }
+
 export default HogTile;
