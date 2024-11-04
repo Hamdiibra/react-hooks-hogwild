@@ -1,6 +1,6 @@
 import React from 'react';
-import HogTile from './HogTile';
-import HogDetails from './HogDetails';
+import HogTile from '../HogTile/HogTile';
+import HogDetails from '../HogDetails/HogDetails';
 import { Grid } from 'semantic-ui-react';
 
 function HogList({ hogs, setSelectedHog , selectedHog }) {

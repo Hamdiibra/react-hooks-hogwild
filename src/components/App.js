@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import Nav from "./Nav";
-import HogList from "./HogList"; 
+import HogList from "./HogList/HogList"; 
 import hogs from "../porkers_data";
 
 
